@@ -1532,7 +1532,7 @@ class MLaunchTool(BaseCmdLineTool):
                 # if it doesn't start with a '-', it could be the value of
                 # the last argument, e.g. `--slowms 1000`
                 # NB: arguments are always quoted
-                result.append(f'"{arg}"')
+                result.append('"%s"' % arg)
 
         # return valid arguments as joined string
         return ' '.join(result)
