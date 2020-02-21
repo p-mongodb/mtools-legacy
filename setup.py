@@ -74,7 +74,7 @@ if sys.platform == 'darwin' and 'clang' in platform.python_compiler().lower():
             res[key] = flags
 
 setup(
-    name='mtools',
+    name='mtools-legacy',
     version=__version__,
     packages=packages,
     package_data={
