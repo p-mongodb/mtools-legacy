@@ -1,4 +1,4 @@
 #!/bin/python
 """Mtools version."""
 
-__version__ = '1.5.5'
+__version__ = '1.5.6'
