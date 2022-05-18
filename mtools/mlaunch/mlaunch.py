@@ -359,7 +359,7 @@ class MLaunchTool(BaseCmdLineTool):
 
         # MongoDB 4.2 adds TLS options to replace the corresponding SSL options
         # https://docs.mongodb.com/manual/release-notes/4.2/#new-tls-options
-        if (LooseVersion(self.current_version) >= LooseVersion("4.2.0")):
+        if False and (LooseVersion(self.current_version) >= LooseVersion("4.2.0")):
             # tls
             tls_args = init_parser.add_argument_group('TLS options')
             tls_args.add_argument('--tlsCAFile',
