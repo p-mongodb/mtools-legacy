@@ -51,7 +51,7 @@ class MongoConnection(Connection):
     """
 
     def __init__(self, *args, **kwargs):
-        kwargs.setdefault('directConnection', True)
+        #kwargs.setdefault('directConnection', True)
         kwargs.setdefault('serverSelectionTimeoutMS', 1)
 
         # Set client application name for MongoDB 3.4+ servers
