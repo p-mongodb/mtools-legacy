@@ -1836,7 +1836,7 @@ class MLaunchTool(BaseCmdLineTool):
                                           self.config_docs[name]})
                     break
                 except OperationFailure as e:
-                    print(e.message + " - will retry")
+                    print(str(e) + " - will retry")
                     time.sleep(1)
 
             if self.args['verbose']:
