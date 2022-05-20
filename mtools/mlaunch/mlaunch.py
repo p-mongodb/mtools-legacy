@@ -665,9 +665,7 @@ class MLaunchTool(BaseCmdLineTool):
             raise SystemExit(errmsg)
 
         # add the 'csrs' parameter as default for MongoDB >= 3.3.0
-        if (LooseVersion(self.current_version) >= LooseVersion("3.3.0") or
-                LooseVersion(self.current_version) == LooseVersion("0.0.0")):
-            self.args['csrs'] = True
+        self.args['csrs'] = True
 
         # construct startup strings
         self._construct_cmdlines()
