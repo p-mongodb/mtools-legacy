@@ -1846,6 +1846,7 @@ class MLaunchTool(BaseCmdLineTool):
 
     def _add_user(self, port, name, password, database, roles):
         con = self.client('localhost:%i' % port, serverSelectionTimeoutMS=10000)
+        ismaster = con['admin'].command('isMaster')
         v = ismaster.get('maxWireVersion', 0)
         if v >= 7:
             # Until drivers have implemented SCRAM-SHA-256, use old mechanism.
